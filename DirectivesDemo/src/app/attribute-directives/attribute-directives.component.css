@@ -1,0 +1,13 @@
+.first{
+    color: red;
+}
+.second{
+    background-color: green;
+}
+.third{
+    height: 20px;
+    border: solid blue 5px;
+}
+*{
+    margin: 5px;
+}

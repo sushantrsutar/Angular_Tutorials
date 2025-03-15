@@ -1,0 +1,6 @@
+1.https://material.angular.io/ open official website anguler material
+2.in teminal (ng add @angular/material) paste thise commang
+3.copy code from angular material website
+4.paste in your project and run it
+5.
+

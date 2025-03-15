@@ -1,0 +1,94 @@
+<p>stuctural-directives</p>
+<!--*ngif is used to hide or display dom elements-->
+<P *ngIf="isVisiable">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non corporis repellat eligendi possimus nemo beatae necessitatibus laboriosam nobis! Est quae, accusamus maiores incidunt ex et minima quia pariatur eligendi deleniti?</P>
+<hr>
+<!--New Sytax -->
+@if(!isVisiable){
+    <h1>hello world</h1>
+}@else {
+<h1>hello I am sushant</h1>
+}
+<hr>
+<!-- *ngFor-->
+ <ul>
+    <li *ngFor="let c of colors">{{c}}</li>
+ </ul>
+<hr>
+ <!-- new syntax -->
+
+ @for (c of colors; track c) { 
+        <li>{{c}}</li>
+ }
+<hr>
+ <h2>Employee Table</h2>
+ <table border="1">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Salary</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (e of emplist; track e) {
+            <tr>
+                <td>{{e.eid}}</td>
+                <td>{{e.ename}}</td>
+                <td>{{e.esalary}}</td>
+            </tr>
+        }
+    </tbody>
+ </table>
+<hr>
+<h2>Student Data</h2>
+<table border="1">
+    <tHead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Marks</td>
+        </tr>
+    </tHead>
+    <tbody>
+        @for (s of stuList; track s) {
+            <tr>
+                <td>{{s.sId}}</td>
+                <td>{{s.sName}}</td>
+                <td>{{s.sMarks}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr>
+<!--*switch-->
+<div [ngSwitch]="today">
+    <div *ngSwitchCase="1">Mon</div>
+    <div *ngSwitchCase="2">Tue</div>
+    <div *ngSwitchCase="3">Wen</div>
+    <div *ngSwitchCase="4">Thu</div>
+    <div *ngSwitchCase="5">Fri</div>
+    <div *ngSwitchCase="6">Sat</div>
+    <div *ngSwitchCase="7">sun</div>
+</div>
+
+<!--New syntax for switch-->
+<div>
+    @switch (today) {
+        @case (1) {
+            <p>Mon</p>
+        }@case (2) {
+            <p>Tue</p>
+        }@case (3) {
+            <p>Wed</p>
+        }@case (4) {
+            <p>Thu</p>
+        }@case (5) {
+            <p>Fri</p>
+        }@case (6) {
+            <p>Sat</p>
+        }@case (7) {
+            <p>Sun</p>
+        }
+    }
+</div>
+<hr>

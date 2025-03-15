@@ -1,0 +1,9 @@
+
+<p>This is the parent component</p>
+<!-- get dada from child -->
+<app-child (childemiter)="getDataFromChild($event)"></app-child>
+<p>{{dataFromChild}}</p>
+
+
+<!-- for send data to child -->
+<app-child [datafromParent]="msg2"><app-child>

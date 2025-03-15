@@ -1,0 +1,12 @@
+<h2>Example ofattribute directives</h2>
+<!--ngclass directives add and remove css classes on html elements -->
+<div [ngClass]="'first'">div class one</div>
+<div [ngClass]="'second'">div class two</div>
+<div [ngClass]="'third'">div class three</div>
+<div [ngClass]="['first','third']">div class one,class third with array classes</div>
+<div [ngClass]="{'first':true,'second':false,'third':true}">objects</div>
+
+<!--ngStyle use-->>
+<div>
+    <p [ngStyle]="{'color':'black','background-color':'yellow'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae minus velit odit provident rerum ullam, nesciunt numquam ratione facere possimus saepe esse eaque. Corporis error quod praesentium placeat mollitia. Eum.</p>
+</div>

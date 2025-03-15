@@ -1,0 +1,12 @@
+<h1>Name Validation</h1>
+<div>
+    <label for="name">Enter Name:</label>
+    <input id="name" type="text" placeholder="Enter name" [(ngModel)]="name">
+</div>
+
+<div>
+    <button (click)="validateName()">Click</button>
+    <span [ngStyle]="{'color': isError ? 'red' : 'green'}">
+        {{ errorMessage }}
+    </span>
+</div>

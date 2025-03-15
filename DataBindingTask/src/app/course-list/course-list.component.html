@@ -1,0 +1,26 @@
+<h1 >Course List</h1>
+
+
+<div>
+    <label for="courseInput">Enter Course Name :</label><br />
+    <input id="courseInput" type="text" [(ngModel)]="newCourseName"/>
+</div>
+
+
+<div>
+    <button (click)="addCourse()">Add Course</button>
+    <button (click)="clearList()">Clear List</button>
+</div>
+
+
+<div *ngIf="courseList.length > 0; else noCourses">
+    <h3>Available Courses:</h3>
+    <ul>
+        <li  *ngFor="let course of courseList">{{ course.courseName }}</li>
+    </ul>
+</div>
+
+
+<ng-template #noCourses>
+    <p>No courses available</p>
+</ng-template>

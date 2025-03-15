@@ -1,0 +1,28 @@
+<h1>My Name is {{name}}</h1>
+<h2>{{5 + 5}}</h2>
+
+<!-- Property binding -->
+<button [disabled]="isdiseable">Save</button>
+
+<input type="text" [value]="name">
+<img [src]="src">
+
+<!--Atribute binding-->
+<p [style.color]="parastyle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum autem ducimus accusamus, commodi quidem animi at neque illum ex reiciendis cum omnis impedit doloremque quae sequi beatae nesciunt voluptate laborum?</p>
+<div [style]="divstyle">Thise is div</div>
+<p [class.myclass]="isboolean">Good morning</p>
+
+<!--demo callspan-->
+<table border="1">
+    <tr>
+        <th [attr.colspan]="callspan">Id</th>
+        <th>Name</th>
+        <th>Ph no</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Sushant</td>
+        <td>123456</td>
+    </tr>
+</table>
+

@@ -1,0 +1,24 @@
+{
+  "productList": [
+    {
+      "id": "102",
+      "pname": "Mobile",
+      "pprice": "10000"
+    },
+    {
+      "id": "103",
+      "pname": "Printer",
+      "pprice": "70000"
+    },
+    {
+      "id": "101",
+      "pname": "Tv",
+      "pprice": "129999"
+    },
+    {
+      "id": "1011",
+      "pname": "bag",
+      "pprice": "1200"
+    }
+  ]
+}

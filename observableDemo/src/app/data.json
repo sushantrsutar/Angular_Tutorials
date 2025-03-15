@@ -1,0 +1,23 @@
+{
+  "Employees": [
+    {
+      "id": "f3ee",
+      "eid": "101",
+      "name": "amol",
+      "salary": "12345"
+    },
+    {
+      "id": "8a71",
+      "eid": "102",
+      "name": "neha",
+      "salary": "70000"
+    },
+    {
+      "id": "2fb1",
+      "eid": "103",
+      "name": "suraj",
+      "salary": "33333"
+    }
+  ]
+  
+}

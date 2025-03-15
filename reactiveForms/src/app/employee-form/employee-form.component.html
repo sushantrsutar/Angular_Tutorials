@@ -1,0 +1,51 @@
+<h1>Reactive Form Demo</h1>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" >
+    <div>
+        <label for="fname">Enter First Name:</label><br>
+        <input type="text" id="fname" formControlName="fname">
+        <div *ngIf="fname?.invalid && fname?.touched">
+            <b *ngIf="fname?.errors?.['required']">First name required</b>
+            <b *ngIf="fname?.errors?.['minlength']">Min length is Three</b>
+        </div>
+    </div>
+    <div>
+        <label for="lname">Enter Last Name:</label><br>
+        <input type="text" id="lname" formControlName="lname">
+        <div *ngIf="lname?.invalid && lname?.touched">
+            <b *ngIf="lname?.errors?.['required']">Last name required</b>
+            <b *ngIf="lname?.errors?.['minlength']">Min length is Three</b>
+        </div>
+    </div>
+    <div>
+        <label for="email">Enter Email:</label><br>
+        <input type="email" id="Email" formControlName="email">
+        <div *ngIf="email?.invalid && email?.touched">
+            <b *ngIf="email?.errors?.['required']">Email required</b>
+            <b *ngIf="email?.errors?.['email']">Not valid Email</b>
+        </div>
+    </div>
+    <div>
+        <label for="email">Enter Password:</label><br>
+        <input type="password" id="password" formControlName="password">
+        <div *ngIf="password?.invalid && password?.touched">
+            <b *ngIf="password?.errors?.['required']">Password required</b>
+            <b *ngIf="password?.errors?.['minlength']">Min length is 8</b>
+            <b *ngIf="password?.errors?.['maxlength']">Max length is 12</b>
+        </div>
+    </div>
+    <div>
+        <label for="email">Enter Address:</label><br>
+        <input type="text" id="" formControlName="address">
+        <div *ngIf="address?.dirty">change happen</div>
+        <div *ngIf="address?.pristine">field Not change</div>
+    </div>
+    <div>
+        <label for="">Enter Age:</label><br>
+        <input type="text" formControlName="age">
+        <div *ngIf="age?.untouched">Field untouched</div>
+        <!-- <div *ngIf="age?.touched">Field touched</div> -->
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>

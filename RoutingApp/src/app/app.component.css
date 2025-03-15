@@ -1,0 +1,16 @@
+nav{
+    background-color: rgb(87, 169, 169);
+    height: 50px;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 20px
+    
+    
+}
+.activebutton{
+   
+    border: 1px;
+}
+.button{
+    color: aquamarine;
+}

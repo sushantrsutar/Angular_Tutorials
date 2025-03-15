@@ -1,0 +1,36 @@
+<form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+    <div class="card">
+        <div class="card-body">
+            <!-- Title Input -->
+            <div class="mb-5">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" class="form-control" name="title" id="title" #title="ngModel"
+                    [(ngModel)]="model.title" required />
+                <!-- Validation Error Message -->
+                <div *ngIf="title.invalid && title.touched" style="color: red;">
+                    Title is required
+                </div>
+            </div>
+
+            <!-- Description Textarea -->
+            <div class="mb-3">
+                <label for="input2" class="form-label">Description:</label>
+                <textarea class="form-control" name="discreption" id="input2" rows="3" #description="ngModel"
+                    [(ngModel)]="model.discreption" required></textarea>
+                <!-- Validation Error Message -->
+                <div *ngIf="description.invalid && description.touched" style="color: red;">
+                    Description is required
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mb-3" align="center">
+            <button type="submit" class="btn btn-primary btn-lg" [disabled]="courseForm.invalid">
+                Save
+            </button>
+        </div>
+    </div>
+</form>
+
+<h1>{{'sushant' | uppercase}}</h1>

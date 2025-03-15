@@ -1,0 +1,43 @@
+<h1>Product List</h1>
+
+<form action="" [formGroup]="myform" class="m-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Product id :</label>
+        <input type="text" class="form-control" id="id" placeholder="Enter the id " formControlName="id" >
+      </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Product name :</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter the name " formControlName="pname" >
+      </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Product price :</label>
+        <input type="text" class="form-control" id="salary" placeholder="Enter the price " formControlName="pprice" >
+      </div>
+
+      <div>
+        <button class="btn btn-secondary " (click)="addProduct()">{{btn}}</button>
+       
+      </div>
+</form>
+<hr>
+<div *ngIf="productlist.length==0">
+<p>No product in list</p>
+</div>
+<h4>Product Data</h4>
+<table class="table" *ngIf="productlist.length!=0">
+  <thead>
+      <th>Product id</th>
+      <th>Product name</th>
+      <th>Product price</th>
+      <th colspan="2">Options</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productlist">
+      <td>{{p.id}}</td>
+      <td>{{p.pname}}</td>
+      <td>{{p.pprice}}</td>
+      <td><button class="btn btn-primary" (click)="editProduct(p)">Edit</button></td>
+      <td><button class="btn btn-danger" (click)="removeProduct(p.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
